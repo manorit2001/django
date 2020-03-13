@@ -1,0 +1,10 @@
+<h2>{{q.question_text}}</h2>
+{% if cl %}
+    <ul>
+        {% for c in cl %}
+        <li><b>{{c.choice_text}}</b>:{{c.votes}}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+<p>No polls are available</p>
+{% endif %}

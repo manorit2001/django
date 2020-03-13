@@ -1,0 +1,9 @@
+{% if ql %}
+    <ul>
+        {% for q in ql %}
+        <li> <a href="{% url 'detail' q.id %}">{{q.question_text}}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+<p>No polls are available</p>
+{% endif %}
